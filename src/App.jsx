@@ -1,13 +1,12 @@
-/** @format */
-
 import { useState } from "react";
 import "./App.css";
-import { Routes, Route, Link, Outlet } from "react-router-dom";
-import { Button, Stack } from "@chakra-ui/react";
 import Login from "./compoents/SignIn/Logins";
 import Register from "./compoents/SignUp/Register";
-import Slider from "./compoents/Slider/Slider";
-import logo from './assets/etkinlik-logo.svg';
+import Home from "./page/Home";
+import Events from "./page/Events";
+import NoMatch from "./page/404";
+import Layout from "./page/Layout";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,82 +18,10 @@ function App() {
           <Route index element={<Home />} />
           <Route path="events" element={<Events />} />
           <Route path="*" element={<NoMatch />} />
-          <Route path="/login" element={<Login />} />
+          {/* <Route path="/login" element={<Login />} /> */}
           <Route path="/register" element={<Register />} />
         </Route>
       </Routes>
-    </div>
-  );
-}
-
-function Layout() {
-  return (
-    <div>
-      <nav className="nav">
-        <img src={logo} alt="" />
-        <ul className="nav-links">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/events">Events</Link>
-          </li>
-        </ul>
-        <Stack direction="row" spacing={4}>
-          <Link to="/login">
-            <Button colorScheme="pink" variant="outline">
-              Login
-            </Button>
-          </Link>
-
-          <Link to="/register">
-            <Button colorScheme="blue" variant="outline">
-              Register
-            </Button>
-          </Link>
-        </Stack>
-      </nav>
-
-      <hr />
-
-      <Outlet />
-    </div>
-  );
-}
-
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-
-      <Slider />
-    </div>
-  );
-}
-
-function Events() {
-  return (
-    <div>
-      <h2>Etkinlikler Yaklaşıyor!</h2>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-    </div>
-  );
-}
-
-function NoMatch() {
-  return (
-    <div>
-      <h2>Nothing to see here!</h2>
-      <p>
-        <Link to="/">Go to the home page</Link>
-      </p>
     </div>
   );
 }

@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@auth0/auth0-react": "^2.0.1",
     "@chakra-ui/modal": "^2.2.9",
     "@chakra-ui/react": "^2.5.2",
     "@emotion/react": "^11.10.6",

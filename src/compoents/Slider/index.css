@@ -1,4 +1,37 @@
-.home-slider .swiper-pagination {
+.home-slider {
+  /* width: 90%; */
+}
+
+.home-slider .swiper-button-prev,
+.home-slider .swiper-button-next {
+  width: 40px;
+  height: 40px;
+  background-color: #ea545499;
+  border-radius: 100%;
+}
+
+.home-slider .swiper-button-prev::after,
+.home-slider .swiper-button-next::after {
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  color: #F9F5EB;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.home-slider .swiper-button-prev::after {
   position: absolute;
-  bottom: -50px;
+  left:50%;
+  transform: translateX(-25%);
+}
+
+.home-slider .swiper-button-next::after {
+  position: absolute;
+  right: 0;
+  transform: translateX(40%);
+}
+
+.home-slider .swiper-wrapper {
+
 }

@@ -2,19 +2,3 @@
   margin: auto;
   max-width: 1200px;
 }
-
-.nav{
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav-links{
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-
-.nav-links a {
-  text-decoration: none;
-}
-
